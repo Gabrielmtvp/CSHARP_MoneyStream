@@ -1,0 +1,21 @@
+# Build files
+bin/
+obj/
+
+# User settings
+.vs/
+*.user
+
+# NuGet packages
+packages/
+project.assets.json
+
+# Logs and temp files
+*.log
+*.cache
+
+# Secrets (if applicable)
+secrets.json
+.env
+
+.DS_Store
