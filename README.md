@@ -7,7 +7,7 @@ A C# project following Domain-Driven Design (DDD) principles with FluentValidati
 This project is built using C# and follows Domain-Driven Design (DDD) principles to create a maintainable, scalable, and well-structured architecture. It also integrates FluentValidation, a powerful validation library, to ensure robust and clean validation logic for domain entities.
 
 🛠️ Tech Stack
-	•	C# (.NET Core/.NET 6/7/etc.) – The main programming language used for the application.
+	•	C# – The main programming language used for the application.
 	•	DDD (Domain-Driven Design) – A software design approach that structures the project around business logic.
 	•	FluentValidation – A NuGet package for declarative and reusable validation logic.
 
@@ -54,7 +54,7 @@ public class CustomerValidator : AbstractValidator<Customer>
 📌 Prerequisites
 
 Ensure you have the following installed:
-	•	.NET SDK (version X.X)
+	•	.NET SDK (version 9.0.202)
 	•	Visual Studio / VS Code
 	•	NuGet Package Manager
 
@@ -62,8 +62,8 @@ Ensure you have the following installed:
 	1.	Clone the repository
 
 ```
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/yourusername/yourproject.git](https://github.com/Gabrielmtvp/CSHARP_MoneyStream.git
+cd CSHARP_MoneyStream
 ```
 
 2.	Restore dependencies
