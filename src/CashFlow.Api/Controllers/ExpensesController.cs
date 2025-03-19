@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Runtime.CompilerServices;
 using CashFlow.Communication.Responses;
+using CashFlow.Exception.Exceptions;
 
 namespace CashFlow.Api.Controllers;
 
@@ -23,9 +24,9 @@ public class ExpensesController: ControllerBase
 
             return Created(string.Empty, response);
         } 
-        catch (ArgumentException ex) 
+        catch (ErrorOnValidationException ex) 
         {
-            var errorResponse = new ResponseErrorJson(ex.Message);
+            var errorResponse = new ResponseErrorJson(ex.Errors);
 
             return BadRequest(errorResponse);
         }

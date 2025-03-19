@@ -2,6 +2,7 @@ using System;
 using CashFlow.Communication.Enums;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
+using CashFlow.Exception.Exceptions;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
@@ -23,7 +24,8 @@ public class RegisterExpenseUseCase
         if(result.IsValid == false)
         {
             var errorMessages = result.Errors.Select(f => f.ErrorMessage).ToList();
-            throw new ArgumentException(errorMessages);
+
+            throw new ErrorOnValidationException(errorMessages);
         }
     }
 }
