@@ -6,10 +6,10 @@ A C# project following Domain-Driven Design (DDD) principles with FluentValidati
 
 This project is built using C# and follows Domain-Driven Design (DDD) principles to create a maintainable, scalable, and well-structured architecture. It also integrates FluentValidation, a powerful validation library, to ensure robust and clean validation logic for domain entities.
 
-🛠️ Tech Stack
-	•	C# – The main programming language used for the application.
-	•	DDD (Domain-Driven Design) – A software design approach that structures the project around business logic.
-	•	FluentValidation – A NuGet package for declarative and reusable validation logic.
+🛠️ Tech Stack</br>
+	•	C# – The main programming language used for the application.</br>
+	•	DDD (Domain-Driven Design) – A software design approach that structures the project around business logic.</br>
+	•	FluentValidation – A NuGet package for declarative and reusable validation logic.</br>
 
 📂 Project Structure (DDD Approach)
 
