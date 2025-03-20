@@ -1,8 +1,12 @@
+using CashFlow.Api.Filters;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers(); // Add this to register controllers
-builder.Services.AddOpenApi(); // Keeps the OpenAPI setup for Swagger
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 var app = builder.Build();
 
