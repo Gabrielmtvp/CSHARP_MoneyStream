@@ -14,11 +14,11 @@ public class ExceptionFilter : IExceptionFilter
         HandleProjectException(context);
        } else
        {
-         ThrowUnkonwError(context);
+         ThrowUnknownError(context);
        }
     }
 
-    private void HandleProjectException(ExceptionContext context)
+    private static void HandleProjectException(ExceptionContext context)
     {
         if(context.Exception is ErrorOnValidationException)
         {
@@ -37,9 +37,9 @@ public class ExceptionFilter : IExceptionFilter
         }
     }
 
-    private void ThrowUnkonwError(ExceptionContext context)
+    private static void ThrowUnknownError(ExceptionContext context)
     {
-        var errorResponse = new ResponseErrorJson("Internal Server Error");
+        var errorResponse = new ResponseErrorJson(context.Exception.Message);
 
         context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
         context.Result = new ObjectResult(errorResponse);
